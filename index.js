@@ -53,12 +53,14 @@ const pizzas = [
 // c) El nombre de cada pizza con su respectivo precio.
 // d) Todos los ingredientes de cada pizza
 
+console.log(`Ejercicio A`);
 pizzas.forEach((pizza) => {
   if (pizza.id % 2 != 0) {
     console.log(`La pizza, ${pizza.nombre} tiene un ID impar.`);
   }
 });
 
+console.log(`Ejercicio B`);
 const PizzaMayoraUnPrecio = (precio) => {
   const resultado = pizzas.some((pizza) => {
     return pizza.precio > precio;
@@ -69,6 +71,12 @@ const PizzaMayoraUnPrecio = (precio) => {
 };
 PizzaMayoraUnPrecio(600);
 
+console.log(`Ejercicio C`);
 pizzas.forEach((pizza) => {
   console.log(`La ${pizza.nombre} cuesta $${pizza.precio}`);
+});
+
+console.log(`Ejercicio D`);
+pizzas.forEach((pizza) => {
+  console.log(`La ${pizza.nombre} tiene ${pizza.ingredientes}`);
 });
